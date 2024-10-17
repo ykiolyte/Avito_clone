@@ -1,0 +1,43 @@
+<!-- views/login.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Вход</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <!-- Обёртка для центрирования контента -->
+  <div class="container">
+    <div class="form-container">
+      <p class="title">Вход</p>
+      <!-- Форма входа -->
+      <form class="form" action="/users/login" method="POST">
+        <div class="input-group">
+          <label for="email">Электронная почта</label>
+          <input type="email" name="email" id="email" placeholder="" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Пароль</label>
+          <input type="password" name="password" id="password" placeholder="" required>
+          <div class="forgot">
+            <a href="#">Забыли пароль?</a>
+          </div>
+        </div>
+        <button class="sign" type="submit">Войти</button>
+      </form>
+      <div class="social-message">
+        <div class="line"></div>
+        <p class="message">Войти с помощью соцсетей</p>
+        <div class="line"></div>
+      </div>
+      <div class="social-icons">
+        <!-- Иконки соцсетей, если используются -->
+      </div>
+      <p class="signup">Нет аккаунта?
+        <a href="/register" class="">Зарегистрироваться</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

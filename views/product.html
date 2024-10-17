@@ -1,0 +1,74 @@
+<!-- views/product.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title id="product-title">Товар</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <!-- Обернём весь контент в контейнер -->
+  <div class="container">
+    <header>
+      <h1 id="product-title">Товар</h1>
+      <nav>
+        <a href="/">Главная</a>
+        <a href="/profile">Мой профиль</a>
+        <a href="/logout">Выйти</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="product-detail">
+        <!-- Карусель изображений -->
+        <div class="product-carousel">
+          <button class="carousel-button prev-button">&#10094;</button>
+          <img id="carousel-image" src="" alt="Фото товара">
+          <button class="carousel-button next-button">&#10095;</button>
+        </div>
+
+        <!-- Информация о товаре -->
+        <div class="product-info">
+          <h2 id="product-price"></h2>
+          <p id="product-description"></p>
+          <h3>Продавец</h3>
+          <!-- Имя продавца со ссылкой на страницу продавца -->
+          <p id="seller-name"></p>
+          <p id="seller-phone"></p>
+          <p id="seller-email"></p>
+        </div>
+      </div>
+
+      <!-- Блок отзывов -->
+      <div class="reviews-container">
+        <h2>Отзывы о товаре</h2>
+        <div id="reviews-list">
+          <!-- Здесь будут отображаться отзывы -->
+        </div>
+
+        <!-- Форма добавления отзыва -->
+        <div class="review-form-container">
+          <h3>Оставить отзыв</h3>
+          <form id="review-form">
+            <label for="review-rating">Оценка:</label>
+            <select id="review-rating" name="rating" required>
+              <option value="5">5 звезд</option>
+              <option value="4">4 звезды</option>
+              <option value="3">3 звезды</option>
+              <option value="2">2 звезды</option>
+              <option value="1">1 звезда</option>
+            </select>
+
+            <label for="review-text">Отзыв:</label>
+            <textarea id="review-text" name="text" rows="4" required></textarea>
+
+            <button type="submit">Отправить отзыв</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/js/product.js"></script>
+</body>
+</html>
